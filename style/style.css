@@ -1,0 +1,284 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #111;
+
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu {
+    background-color: #123;
+    width: 60px;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    transition: all .1s ease-in;
+
+    ul {
+        position: relative;
+        height: 95%;
+
+        /* Icons */
+        i {
+            font-size: 30px;
+        }
+    }
+
+    /* Personal Image & Name */
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        .img-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid white;
+            flex-shrink: 0;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        h2 {
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        transition: .5s;
+    }
+
+    a:hover,
+    .active {
+        background-color: #ffffff55;
+    }
+
+    .log-out {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        a {
+            background-color: #a00;
+        }
+    }
+
+    .log-out a:hover {
+        background-color: #f00;
+    }
+}
+
+@media (min-width: 427px) and (max-width: 769px) {
+    .menu {
+        width: 63px;
+        height: auto;
+    }
+}
+
+@media (min-width: 377px) and (max-width: 426px) {
+    .menu {
+        width: 68px;
+        height: auto;
+
+        .profile {
+            gap: 28px;
+
+            h2 {
+                font-size: 12px;
+            }
+        }
+
+        ul li a {
+            i {
+                font-size: 25px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .menu:hover {
+        width: 340px;
+    }
+}
+
+.menu:hover {
+    width: 260px;
+}
+
+.content {
+    width: 100%;
+    margin: 10px;
+
+    .title-info {
+        background-color: #0481ff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+
+    .data-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .box {
+            background-color: #123;
+            height: 150px;
+            flex-basis: 150px;
+            flex-grow: 1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            i {
+                font-size: 40px;
+            }
+
+            .data {
+                text-align: center;
+
+                span {
+                    font-size: 30px;
+                }
+            }
+        }
+
+        .box:hover {
+            background-color: #ffffff55;
+        }
+
+        @media (min-width: 427px) and (max-width: 769px) {
+            .box {
+                height: 120px;
+
+                i {
+                    font-size: 30px;
+                }
+
+                span {
+                    font-size: 25px;
+                }
+            }
+        }
+
+        @media (min-width: 377px) and (max-width: 426px) {
+            .box {
+                i {
+                    font-size: 25px;
+                }
+
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    table {
+        width: 100%;
+        text-align: center;
+        border-spacing: 8px;
+
+        td,
+        th {
+            background-color: #123;
+            height: 40px;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 377px) and (max-width: 426px) {
+            th,
+            td {
+                font-size: 12px;
+            }
+        }
+
+        td:hover {
+            background-color: #ffffff55;
+        }
+
+        th {
+            background-color: #0080ff;
+            font-weight: bold;
+        }
+
+        .price,
+        .count {
+            padding: 6px;
+            border-radius: 6px;
+        }
+
+        .price {
+            background-color: green;
+        }
+
+        .count {
+            background-color: gold;
+            color: #111;
+        }
+    }
+}
+
+
+/* Screens */
+
+/* @media (max-width: 320px) {
+    .video-overlay {
+        height: 29.3%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 376px) {
+    .video-overlay {
+        height: 34.4%;
+    }
+} */
+
+/* @media (min-width: 377px) and (max-width: 426px) {
+    .video-overlay {
+        height: 39%;
+    }
+} */
+
+/* @media (min-width: 427px) and (max-width: 769px) {
+    .element {
+        property: value;
+    }
+} */
+
+/* @media (min-width: 770px) and (max-width: 1024px) {
+    .video-overlay {
+        height: 83.6%;
+    }
+} */
